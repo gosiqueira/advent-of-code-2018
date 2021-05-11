@@ -25,4 +25,4 @@ The solutions posted here are cleaned-up versions of the actual code written whe
 ## Thanks!
 
 Many thanks to [Eric Wastl](http://was.tl/), who creates Advent of Code, as well as to the amazing community over at [/r/adventofcode](https://www.reddit.com/r/adventofcode/)!
-Also to my friend [Gabriel Kanegae](http://github.com/GabeKanegae), who motiovated me to start Advent of Code and I+ stole this repo description. 😁
+Also to my friend [Gabriel Kanegae](http://github.com/KanegaeGabriel), who motiovated me to start Advent of Code and I+ stole this repo description. 😁
