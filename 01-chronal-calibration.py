@@ -41,7 +41,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     tic = time.time()
-    reponse = chronal_calibration(args.verbose)
+    response = chronal_calibration(args.verbose)
     tac = time.time()
-    print(*reponse)
+    print(*response)
     print(f'{tac - tic:.3f} s')
