@@ -18,14 +18,14 @@ def no_matter_how_you_slice_it(verbose=False):
     for elf_id, start, size in zip(raw_claims[::4], raw_claims[2::4], raw_claims[3::4]):
         elf_id = int(elf_id[1:])
         x, y = map(int, start[:-1].split(','))
-        h, w = map(int, size.split('x'))
-        claims.append([elf_id, x, y, h, w])
+        w, h = map(int, size.split('x'))
+        claims.append([elf_id, x, y, w, h])
 
     fabric = {}
 
-    for _, x, y, h, w in claims:
-        for dx in range(h):
-            for dy in range(w):
+    for _, x, y, w, h in claims:
+        for dx in range(w):
+            for dy in range(h):
                 pos = (x+dx, y+dy)
                 fabric[pos] = fabric.get(pos, 0) + 1
 
@@ -36,16 +36,18 @@ def no_matter_how_you_slice_it(verbose=False):
 
     unique_id = 0
 
-    for elf_id, x, y, h, w in claims:
+    for elf_id, x, y, w, h in claims:
         unique = True
-        for dx in range(h):
-            for dy in range(w):
+        for dx in range(w):
+            for dy in range(h):
                 pos = (x+dx, y+dy)
                 if fabric[pos] > 1:
                     unique = False
+                    break
 
         if unique == True:
             unique_id = elf_id
+            break
 
     if verbose:
         print(f'Elf ID without overlaps: {unique_id}')
