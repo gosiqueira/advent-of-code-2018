@@ -15,7 +15,8 @@ def no_matter_how_you_slice_it(verbose=False):
     raw_claims = get_input(day=3)
 
     claims = []
-    for elf_id, start, size in zip(raw_claims[::4], raw_claims[2::4], raw_claims[3::4]):
+    for claim in raw_claims:
+        elf_id, _, start, size = claim.split()
         elf_id = int(elf_id[1:])
         x, y = map(int, start[:-1].split(','))
         w, h = map(int, size.split('x'))

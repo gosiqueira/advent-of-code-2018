@@ -1,7 +1,7 @@
 def get_input(day=1):
     inputs = []
     with open(f'inputs/input-{day:02d}.txt', 'r') as f:
-        inputs = f.read().split()
+        inputs = f.read().splitlines()
 
     try:
         inputs = [int(elem) for elem in inputs]
