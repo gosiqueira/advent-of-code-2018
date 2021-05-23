@@ -10,3 +10,6 @@ def get_input(day=1):
 
     return inputs
 
+
+def manhatan_dist(point1, point2):
+    return abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
