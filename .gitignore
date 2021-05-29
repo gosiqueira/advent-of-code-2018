@@ -131,3 +131,6 @@ dmypy.json
 # Advent of code inputs
 inputs/
 inputs/*
+
+# VSCode config folder
+.vscode/
